@@ -7,7 +7,15 @@ public class MainApp {
 
     public static void main(String[] args)
     {
-        (new PenejemahUang("15.00p")).convertToUang();
+        //(new PenejemahUang("1c5p")).convertToUang();
+        HandlePembayaran hp = new HandlePembayaran();
+        hp.entriesMany("1q");
+        hp.entriesMany("2d");
+        hp.entriesMany("1n");
+        hp.entriesMany("2p");
+        System.out.print("$");
+        System.out.format("%.2f",hp.getTotalBayar());
+        System.out.println();
         //(new  MainApp()).runSecondMachine();
     }
 
